@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C言語ってなに？</title>
+    <link rel="stylesheet" type="text/css" href="What_C_language.css" />
+  </head>
+
+  <body>
+    <h1>C言語とはなんぞや？</h1>
+
+    <div class="tab-container">
+      <div class="tab-header">
+        <button onclick="scrollToSection('tab1-section')">
+          C言語の概要説明
+        </button>
+        <button onclick="scrollToSection('tab2-section')">
+          C言語の詳細説明
+        </button>
+        <button onclick="scrollToSection('tab3-section')">C言語の特徴</button>
+        <button
+          onclick="location.href='file:///C:/Users/daiki/Documents/VSCフォルダ/HTMLCSS/C%20Language_problem.html'"
+        >
+          C言語学習でよくある問題集
+        </button>
+      </div>
+    </div>
+
+    <h2>C言語の概要説明</h2>
+    <section id="tab1-section">
+      <ul>
+        <li>
+          言語名
+          <ul>
+            <li>C言語</li>
+          </ul>
+        </li>
+        <li>
+          開発元
+          <ul>
+            <li>AT&Tベル研究所</li>
+          </ul>
+        </li>
+        <li>
+          開発年
+          <ul>
+            <li>1972年</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <h3>C言語の詳細説明</h3>
+    <section id="tab2-section">
+      <p>
+        C言語とは元々、UNIXというOSを開発するために作られた言語であり、
+        <span class="highlight" onclick="showExplanation('word1')"
+          >高水準言語</span
+        >の特徴を持つ。
+      </p>
+      <p>
+        さらに、メモリ管理やハードウェア制御が行える<span
+          class="highlight"
+          onclick="showExplanation('word2')"
+          >低水準言語</span
+        >としても動作する。
+      </p>
+    </section>
+    <div id="word1" class="explanation">
+      高水準言語は「高級言語」とも呼ばれ、人間が理解できる文法を定義し、開発効率を向上させた言語のことです。
+    </div>
+    <div id="word2" class="explanation">
+      低水準言語は「低級言語」とも呼ばれ、CPUが直接理解して処理できる「機械語」または機械語に近い構造を持った言語のことです。
+    </div>
+
+    <h4>C言語の特徴</h4>
+    <section id="tab3-section">
+      <ol>
+        <li>
+          手続き型言語
+          <p>C言語は手続き型言語であるため構造がシンプルである。</p>
+        </li>
+        <li>
+          処理速度が速い
+          <p>
+            C言語は<span class="highlight" onclick="showExplanation('word3')"
+              >コンパイラ言語</span
+            >であり、コンパイラ言語の中でも処理速度が最速と言われている。
+          </p>
+        </li>
+        <li>
+          いかなる環境下でも実行可能
+          <p>
+            C言語はマルチプラットフォームであるため、環境に依存せず実行できる。
+          </p>
+        </li>
+        <li>
+          数多くの分野で応用されている
+          <p>
+            OS開発からアプリケーション、組み込み制御機器など、多岐にわたる分野でC言語が活用されている。
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <div id="word3" class="explanation">
+      コンパイラ言語とは、ソースコード全体を機械語に変換し、その後実行される言語のことです。
+    </div>
+
+    <figure>
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhW-EWKoRQKdpR-GQhA3uGitJpJp3_g8DjFAT8jRx09gO3dMAb1rcFxmh4vq2vRCUhDYdUJFlpzOLdGgV60KOqTEo17Uwi9TgTSIRbVtV138GNPaddDkcP1usZqggKc9-DX4Nuhr1XWYTv/s800/computer_programming_man.png"
+        width="300px"
+        alt="C言語に関する画像"
+      />
+      <figcaption>
+        <a href="#">さらに詳しく知る</a>
+      </figcaption>
+    </figure>
+
+    <script>
+      function scrollToSection(id) {
+        const section = document.getElementById(id);
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+
+      function showExplanation(id) {
+        const explanation = document.getElementById(id);
+        explanation.style.display =
+          explanation.style.display === "none" ? "block" : "none";
+      }
+    </script>
+  </body>
+</html>

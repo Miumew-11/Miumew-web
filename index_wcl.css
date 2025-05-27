@@ -1,0 +1,155 @@
+/* 基本設定 */
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f4f4f9;
+  color: #333;
+  transition: background-color 0.5s ease;
+}
+
+/* 全体の幅と余白 */
+h1,
+h2,
+h3,
+h4 {
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 4em;
+  color: #2c3e50;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h2,
+h3,
+h4 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* セクションのスタイリング */
+section {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  background-color: #eef3ff;
+}
+
+/* リストのスタイル */
+ul,
+ol {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* ハイライト */
+.highlight {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.highlight:hover {
+  color: #0056b3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 説明部分 */
+.explanation {
+  display: none;
+  color: gray;
+  font-style: italic;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-left: 3px solid #ccc;
+  margin-top: 5px;
+  transition: opacity 0.5s ease;
+}
+
+.explanation.show {
+  display: block;
+  opacity: 1;
+}
+
+/*タブのスタイル */
+.tab-container {
+  margin-bottom: 20px;
+}
+
+.tab-header button {
+  margin-right: 5px;
+}
+
+/* 画像とリンクのスタイル */
+figure {
+  text-align: center;
+  margin: 20px 0;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figure figcaption a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+figure figcaption a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* メディアクエリでレスポンシブ対応 */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  section {
+    padding: 15px;
+  }
+}
