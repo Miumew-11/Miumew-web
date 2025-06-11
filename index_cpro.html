@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C言語学習問題集</title>
+
+</head>
+<body>
+  <h1>C言語学習でよくある問題集</h1>
+
+  <!-- Problem 1 -->
+  <div class="problem">
+    <h2 onclick="toggleVisibility('problem1')">問題 1: Hello Worldを表示しよう</h2>
+    <div id="problem1" class="explanation">
+      <p>問題: C言語で「Hello, World!」と表示するプログラムを作成してください。</p>
+      <h3 onclick="toggleVisibility('answer1')">答え</h3>
+      <div id="answer1" class="answer">
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Problem 2 -->
+  <div class="problem">
+    <h2 onclick="toggleVisibility('problem2')">問題 2: 入力された数値の和を求めよう</h2>
+    <div id="problem2" class="explanation">
+      <p>問題: ユーザーから2つの整数を入力させ、それらの和を計算して表示するプログラムを作成してください。</p>
+      <h3 onclick="toggleVisibility('answer2')">答え</h3>
+      <div id="answer2" class="answer">
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b;
+    printf("2つの整数を入力してください: ");
+    scanf("%d %d", &a, &b);
+    printf("入力された2つの数値の和: %d\n", a + b);
+    return 0;
+}</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Problem 3 -->
+  <div class="problem">
+    <h2 onclick="toggleVisibility('problem3')">問題 3: 配列の平均を計算しよう</h2>
+    <div id="problem3" class="explanation">
+      <p>問題: ユーザーから5つの整数を入力させ、その平均を計算して表示するプログラムを作成してください。</p>
+      <h3 onclick="toggleVisibility('answer3')">答え</h3>
+      <div id="answer3" class="answer">
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int numbers[5], sum = 0;
+    float average;
+
+    printf("5つの整数を入力してください: ");
+    for (int i = 0; i < 5; i++) {
+        scanf("%d", &numbers[i]);
+        sum += numbers[i];
+    }
+
+    average = sum / 5.0;
+    printf("入力された数値の平均: %.2f\n", average);
+    return 0;
+}</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Problem 4 -->
+  <div class="problem">
+    <h2 onclick="toggleVisibility('problem4')">問題 4: フィボナッチ数列を表示しよう</h2>
+    <div id="problem4" class="explanation">
+      <p>問題: フィボナッチ数列の最初の10項を表示するプログラムを作成してください。</p>
+      <h3 onclick="toggleVisibility('answer4')">答え</h3>
+      <div id="answer4" class="answer">
+        <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int n = 10, first = 0, second = 1, next;
+    printf("フィボナッチ数列の最初の10項:\n");
+    
+    for (int i = 1; i <= n; i++) {
+        if (i == 1) {
+            printf("%d ", first);
+            continue;
+        }
+        if (i == 2) {
+            printf("%d ", second);
+            continue;
+        }
+        next = first + second;
+        first = second;
+        second = next;
+        printf("%d ", next);
+    }
+    printf("\n");
+    return 0;
+}</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleVisibility(id) {
+      const element = document.getElementById(id);
+      element.style.display = element.style.display === "none" ? "block" : "none";
+    }
+  </script>
+
+</body>
+</html>
